@@ -1,4 +1,4 @@
-<!-- version 0.2 added the condtional statements to title -->
+<!-- version 0.3 added the for loop to display posts-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,5 +10,8 @@
     </head>
     <body>
         <h1>Welcome,{{user.username}}</h1>
+        {% for post in posts %}
+        <div><p>{{post.author.username}} says: {{post.body}}</p></div>
+        {% endfor %}
     </body>
 </html>
