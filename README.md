@@ -75,3 +75,17 @@ Instead of mentioning --debug flag every time we can mention it in .flaskenv fil
 FLASK_APP = microblog.py
 FLASK_DEBUG = 1
 ```
+
+## Stage-3: using templates
+
+In this stage we are going to use templates to render the html code. We are going to create a templates folder and inside that folder we are going to create a index.html file and then we are going to use the render_template function to render the html code.
+
+```python
+# app/routes.py
+from flask import render_template
+
+@app.route('/')
+def index():
+    user = {"username": "vasulu"}
+    return render_template('index.html',title="Home", user=user)
+```
