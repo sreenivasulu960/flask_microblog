@@ -96,3 +96,7 @@ We have 3 sub stages in this stage
 **stage3.2 conditonal statements -> In this stage we are going to use the condtional statements to handle the case where the title is not passed to the template**
 
 **stage3.3 loops -> In this stage we are going to use the loops to display the list of posts**
+
+## Stage4 - Template inheritance
+
+lets try to add a navigation bar to our page. since the navigation bar can be on multiple pages we need to repeat the same code in the multiple pages instead of that we can create a base.html file and then inherit it in the other pages.so we are going to create a new file in templates base.html and add the functionality of inheriting the base.html file in index.html
