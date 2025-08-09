@@ -13,4 +13,14 @@ from app import app
 
 # simple view function that returns a string "Hello, World!"
 def index():
-    return "Hello, World!"
+    user = {"username": "vasulu"}
+    return f"""
+    <html>
+        <head>
+            <title>Home - Microblog</title>
+        </head>
+        <body>
+            <h1>Hello, {user['username']}!</h1>
+        </body>
+    </html>
+"""

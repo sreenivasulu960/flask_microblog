@@ -44,6 +44,34 @@ and then open the browser and go to http://127.0.0.1:5000/
 
 I have followed the blog written by miguel grinberg. here is the link for the blog(https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
-## Stage-1 : Create a simple web page
+## Stage-1: Create a simple web page
 
 In this stage we are going to create a simple flask application that returns a hello world string
+
+## Stage-2: Returning html
+
+In this stage we extend our application to return a html code instead of a string. We are going to modify our view function to return the below html code. As of now we have hardcoded the user details as dictionary
+
+```python
+def index():
+    user = {"username": "vasulu"}
+    return f"""
+    <html>
+        <head>
+            <title>Home - Microblog</title>
+        </head>
+        <body>
+            <h1>Hello, {user['username']}!</h1>
+        </body>
+    <
+```
+
+**Debug mode:** When you run the application using `flask run` it will run with debug mode off so if you make changes to the code you have to restart the application. But if you run the application using `flask run --debug` it will run with debug mode on and it will automatically restart the application when you make changes to the code.
+
+Instead of mentioning --debug flag every time we can mention it in .flaskenv file and then run the application using `flask run` command.
+
+```
+# .flaskenv
+FLASK_APP = microblog.py
+FLASK_DEBUG = 1
+```
