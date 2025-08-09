@@ -89,3 +89,10 @@ def index():
     user = {"username": "vasulu"}
     return render_template('index.html',title="Home", user=user)
 ```
+
+We have 3 sub stages in this stage
+**stage3.1 variables** -> In this we are going to use the variables in the jinja template (index.html) to display the title and user details
+
+**stage3.2 conditonal statements -> In this stage we are going to use the condtional statements to handle the case where the title is not passed to the template**
+
+**stage3.3 loops -> In this stage we are going to use the loops to display the list of posts**

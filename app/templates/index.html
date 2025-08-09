@@ -1,7 +1,12 @@
+<!-- version 0.2 added the condtional statements to title -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% if title %}
         <title>{{title}}-Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
     </head>
     <body>
         <h1>Welcome,{{user.username}}</h1>

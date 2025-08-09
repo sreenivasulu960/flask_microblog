@@ -14,4 +14,4 @@ from flask import render_template
 # simple view function that returns a string "Hello, World!"
 def index():
     user = {"username": "vasulu"}
-    return render_template("index.html",title="Home",user=user)
+    return render_template("index.html",user=user)
