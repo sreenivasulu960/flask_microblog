@@ -9,9 +9,25 @@
     </head>
     <body>
         <!-- navigation bar-->
-        <div>Microblog: <a href="/index">Home</a></div>
+        <div>
+            Microblog: 
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
+        <hr>
+        <!-- we are going to display the flash messages here-->
+         {% with messages = get_flashed_messages() %}
+         {% if messages %}
+         <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+         </ul>
+         {% endif %}
+         {% endwith %}
+
         <!-- we are going to use block structure -->
-        {% block posts %}{% endblock %}
+        {% block content %}{% endblock %}
     </body>
 </html>
 

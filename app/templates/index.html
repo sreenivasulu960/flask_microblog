@@ -1,6 +1,6 @@
 <!-- version 0.4 added the template inheritance-->
 {% extends "base.html" %}
-{% block posts %}
+{% block content %}
     <h1>Welcome,{{user.username}}</h1>
     {% for post in posts %}
     <div><p>{{post.author.username}} says: {{post.body}}</p></div>

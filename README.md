@@ -97,6 +97,16 @@ We have 3 sub stages in this stage
 
 **stage3.3 loops -> In this stage we are going to use the loops to display the list of posts**
 
-## Stage4 - Template inheritance
+## Stage4: Template inheritance
 
 lets try to add a navigation bar to our page. since the navigation bar can be on multiple pages we need to repeat the same code in the multiple pages instead of that we can create a base.html file and then inherit it in the other pages.so we are going to create a new file in templates base.html and add the functionality of inheriting the base.html file in index.html
+
+## Stage5: Login Form
+
+lets add a login form to our page. we are going to create a new file in templates login.html and add the functionality of login form in it.For this stage we are going to Flask-WTF extension so we can install it using below command
+
+```bash
+    pip install flask-wtf
+```
+
+and then we are going to create a new file in app/forms.py and add the functionality of login form in it. we are going to create the form and its fields as python class
